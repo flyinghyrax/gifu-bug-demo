@@ -16,6 +16,17 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+
+        if let url = NSURL(string: "https://media.giphy.com/media/VvHuInLUolJde/giphy.gif"),
+            data = NSData(contentsOfURL: url) {
+            gifuView.animateWithImageData(data)
+        }
+
+        if gifuView.isAnimatingGIF && gifuView.isAnimatingGIF && gifuView.isAnimatingGIF {
+            gifuView.stopAnimatingGIF()
+        }
+
+        gifuView.startAnimatingGIF()
     }
 
     override func didReceiveMemoryWarning() {
