@@ -16,8 +16,25 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="suT-q6-Cn0" customClass="AnimatableImageView" customModule="Gifu">
+                                <rect key="frame" x="180" y="236" width="240" height="128"/>
+                                <color key="backgroundColor" red="0.55474668560606055" green="0.55474668560606055" blue="0.55474668560606055" alpha="0.69570840371621623" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="0At-ro-McS"/>
+                                    <constraint firstAttribute="width" constant="240" id="YuS-jF-bzJ"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="suT-q6-Cn0" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="AqJ-P2-MBj"/>
+                            <constraint firstItem="suT-q6-Cn0" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="yY7-Pm-cqX"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="gifuView" destination="suT-q6-Cn0" id="FiW-7W-3Xu"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
