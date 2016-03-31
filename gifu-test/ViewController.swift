@@ -21,12 +21,6 @@ class ViewController: UIViewController {
             data = NSData(contentsOfURL: url) {
             gifuView.animateWithImageData(data)
         }
-
-        if gifuView.isAnimatingGIF && gifuView.isAnimatingGIF && gifuView.isAnimatingGIF {
-            gifuView.stopAnimatingGIF()
-        }
-
-        gifuView.startAnimatingGIF()
     }
 
     override func didReceiveMemoryWarning() {
