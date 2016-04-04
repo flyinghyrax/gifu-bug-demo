@@ -17,6 +17,27 @@ Checkout the appropriate tag and run the project to observe the issue.
 
 ## Issues Demonstrated
 
+### precaching failure
+
+**Tag:** `broken-precache`
+
+**Method:**
+
+1. `git checkout broken-precache`
+2. Use `pod install` and/or `pod update` to be sure the Gifu version from commmit 91ba745 is being used
+3. Open the workspace
+4. Run the project on device or in simulator
+5. Tap "Go places" in the running application
+6. The test GIF contains 90 frames (displayed for 1/4 s each), but the GIF will loop after only 50 frames have displayed
+
+**Analysis:**
+
+If using Gifu from the master branch as of 91ba745, the AnimatableImageView will not display GIFs longer than 50 frames in their entirety. This can be demonstarted with any GIF of sufficient length; the one in this test project counts down from 90, one number per frame.
+
+Changing the `framePreloadCount` [property](https://github.com/kaishin/Gifu/blob/91ba7459cb25ab55fdf590f71270e324c66d63f8/Source/AnimatableImageView.swift#L11) on `AnimatableImageView` caused more or less of the GIF to be played depending on the new value, and testing quickly verifies that the AnimatableImageView only loads the number of frames specified in `framePreloadCount`.
+
+Using `git bisect`, I have determined that the issue was introduced in [91ba745](https://github.com/kaishin/Gifu/commit/91ba7459cb25ab55fdf590f71270e324c66d63f8), which is changes to accomodate the new Swift 2.2 syntax.  The most likely culprit is [this section](https://github.com/kaishin/Gifu/commit/91ba7459cb25ab55fdf590f71270e324c66d63f8#diff-a371863dc341490579ce956d1024a4dc) in the `Animator` class.
+
 ### memory leak
 
 **Tag:** `repro-memory-leak`
