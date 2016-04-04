@@ -17,11 +17,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="suT-q6-Cn0" customClass="AnimatableImageView" customModule="Gifu">
-                                <rect key="frame" x="180" y="236" width="240" height="128"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="suT-q6-Cn0" customClass="AnimatableImageView" customModule="Gifu">
+                                <rect key="frame" x="180" y="180" width="240" height="240"/>
                                 <color key="backgroundColor" red="0.55474668560606055" green="0.55474668560606055" blue="0.55474668560606055" alpha="0.69570840371621623" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="128" id="0At-ro-McS"/>
+                                    <constraint firstAttribute="height" constant="240" id="0At-ro-McS"/>
                                     <constraint firstAttribute="width" constant="240" id="YuS-jF-bzJ"/>
                                 </constraints>
                             </imageView>
