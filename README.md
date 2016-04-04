@@ -21,6 +21,8 @@ Checkout the appropriate tag and run the project to observe the issue.
 
 **Tag:** `broken-precache`
 
+**Issue:** https://github.com/kaishin/Gifu/issues/56
+
 **Method:**
 
 1. `git checkout broken-precache`
@@ -41,6 +43,10 @@ Using `git bisect`, I have determined that the issue was introduced in [91ba745]
 ### memory leak
 
 **Tag:** `repro-memory-leak`
+
+**Issue:** https://github.com/kaishin/Gifu/issues/12 ?
+
+**Pull Request:** https://github.com/kaishin/Gifu/pull/55
 
 **Method:**
 
@@ -63,6 +69,10 @@ For more detail, use Instruments:
 ### retain/release crash
 
 **Tag:** `repro-zombie-bug`
+
+**Issue:** https://github.com/kaishin/Gifu/issues/53
+
+**Pull Request:** https://github.com/kaishin/Gifu/pull/54
 
 **Method:**
 
