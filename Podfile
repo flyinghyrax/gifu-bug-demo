@@ -3,4 +3,4 @@
 # Uncomment this line if you're using Swift
 use_frameworks!
 
-pod 'Gifu', '~> 1.0'
+pod 'Gifu', :git => 'https://github.com/kaishin/Gifu.git', :commit => '91ba745', :submodules => true
